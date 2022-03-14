@@ -8,19 +8,19 @@
 const userWord = prompt('Inserisci una parola, sarà polindroma?');
 
 /* Siccome chiedeva solo il prompt, non c'è bisogno di crearla
+
 function askUserWord(message) {
     const userInput = prompt(message);
     return userInput;
 }*/
-
-// console.log(userWord);
 
 
 
 // Creare una funzione per capire se la parola inserita è polindroma
 
 
-// creo una variabile che mi divide la parola in unici caaratteri
+// creo una variabile che mi divide la parola in unici caaratteri:
+
 let inLettere = userWord.split('');
 console.log('La parola in singole lettere è: ' + inLettere);
 
