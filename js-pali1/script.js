@@ -31,12 +31,12 @@ let valid = false;
 function isParolaPalindroma(poli) {
     for (i = 0; i < inLettere.length; i++) {
         if (poli == inLettere[i] || poli == alContrario[i]) {
-            valid = false;
-            return 'La parola è PALINDROMA!!!! ';
-        } else if (poli !== inLettere) {
             valid = true;
+            return 'La parola è PALINDROMA!!!! ';
+        }
+        if (poli !== inLettere) {
+            valid = false;
             return 'la parola non è palindroma';
-
         }
     }
 }
