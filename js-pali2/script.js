@@ -42,13 +42,15 @@ let sceltaGiocatore;
 do {
     sceltaGiocatore = prompt('Punta su pari o dispari');
 } while
-    (sceltaGiocatore !== 'pari' && sceltaGiocatore !== 'dispari')
+    (sceltaGiocatore !== 'pari' && sceltaGiocatore !== 'dispari');
 
+console.log('Hai scelto: ', sceltaGiocatore);
 
 
 // L'utente inserisce un numero da 1 a 5 
 
 const numeroDelGiocatore = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log('Il numero che hai scelto è: ', numeroDelGiocatore)
 
 
 
@@ -57,14 +59,12 @@ const numeroDelGiocatore = parseInt(prompt('Inserisci un numero da 1 a 5'));
 function numeroRandomPC(min, max) {
 
     const range = max - min + 1;
-
     const generatedNumber = Math.floor(Math.random() * range) + min;
-
     return generatedNumber;
 
 }
 
-numeroEstrattoPc = numeroRandomPC(2, 6);
+numeroEstrattoPc = numeroRandomPC(1, 5);
 console.log('Il numero estratto per il PC è: ' + numeroEstrattoPc);
 
 
@@ -77,9 +77,9 @@ console.log('La somma dei due numeri è: ' + sum);
 
 // Stabiliamo se la somma dei due numeri è pari o dispari
 
-function sommaPariODispari(x, y) {
-    (x + y);
-    if ((x + y) % 2 === 0) {
+function sommaPariODispari(somma) {
+
+    if (somma % 2 === 0) {
         return 'pari';
     }
     else {
@@ -88,13 +88,13 @@ function sommaPariODispari(x, y) {
 }
 
 
-let verdetto = sommaPariODispari(numeroDelGiocatore, numeroRandomPC);
+let verdetto = sommaPariODispari(sum);
 console.log('La SOMMA dei numeri è: ' + verdetto);
 
 
 // Dichiariamo chi ha vinto
 
-if (sceltaGiocatore === 'pari' && verdetto === 'pari') {
+if (sceltaGiocatore == 'pari' && verdetto == 'pari') {
     console.log('Hai vintooooo!');
 } else if (sceltaGiocatore === 'dispari' && verdetto === 'dispari') {
     console.log('Hai vintooooo!');
